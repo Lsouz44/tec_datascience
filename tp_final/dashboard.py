@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
-file_path = "MapBiomas-Tabela_de_Dados.csv"
-data = pd.read_csv(file_path)
+data = pd.read_csv("MapBiomas-Tabela_de_Dados.csv")
 
 # Transpor para formato longo (Ano e Desmatamento como variáveis)
 data_long = data.melt(id_vars=["Classe"], 
@@ -64,8 +63,7 @@ st.pyplot(fig)
 
 ###################################################################################################
 
-file_path2 = "SEEG.csv"
-data2 = pd.read_csv(file_path2)
+data2 = pd.read_csv("SEEG.csv")
 
 # Transpor para formato longo (Ano e Emissao como variáveis)
 data_long2 = data2.melt(id_vars=["Categoria"], 
